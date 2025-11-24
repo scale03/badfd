@@ -1,0 +1,11 @@
+# Binaries
+badfd
+
+# Object files (C compiled)
+*.o
+
+# Go generated files (da bpf2go)
+bpf_bpf*.go
+
+# Editor temp files
+*~
