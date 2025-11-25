@@ -13,13 +13,13 @@ It sits silently in the kernel and only emits events when:
 
 ## Requirements
 * Linux Kernel 5.8+ (BTF support enabled)
-* Root privileges (to load eBPF programs)
-* Go 1.20+ (for building)
+* Root privileges 
+* Go 1.20+ 
 
 ## Installation
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/badfd
+git clone https://github.com/scale03/badfd
 cd badfd
 
 # Build (requires clang and kernel headers)
@@ -30,12 +30,10 @@ make
 
 ### 1. Latency Hunting (Default)
 Show only `open()` syscalls that take longer than 10ms:
-```bash
-sudo ./badfd --ms 10
 ```
 
 ### 2. Error Hunting
-Show only failed open attempts (e.g., missing config, permission denied), ignoring latency:
+Show only failed open attempts, ignoring latency:
 ```bash
 sudo ./badfd --err
 ```
