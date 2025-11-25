@@ -9,7 +9,7 @@ It sits silently in the kernel and only emits events when:
 1. A file operation takes too long (Latency)
 2. A file operation fails (Error)
 
-`badfd` acts as a high-pass filter for filesystem interactions: if an operation is fast and successful, userspace is never notified (Zero Overhead).
+`badfd` acts as a high-pass filter to monitor filesystem interactions: if an operation is fast and successful, userspace is never notified (Zero Overhead).
 
 ## Requirements
 * Linux Kernel 5.8+ (BTF support enabled)
