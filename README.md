@@ -1,6 +1,7 @@
 # badfd
 
-`badfd` is a simple eBPF tool to discover leak in file descriptors.
+`badfd` is a simple eBPF tool designed to detect file descriptor leaks by tracing the openat syscall. 
+It monitors for ENOENT errors (file not found) and tracks operation latency, helping you identify inefficient file patterns, misconfigurations and potential leaks in real-time.
 
 
 ## Requirements
@@ -20,7 +21,7 @@ make
 
 ## Usage
 
-### Default mode, Error hunting
+### Default mode, real time Error hunting 
 ```
 
 sudo ./badfd --err
