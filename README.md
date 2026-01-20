@@ -14,7 +14,7 @@
 git clone https://github.com/scale03/badfd
 cd badfd
 
-# Build (requires clang and kernel headers)
+
 make
 ```
 
