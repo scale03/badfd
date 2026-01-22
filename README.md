@@ -1,15 +1,19 @@
 # badfd
 
-`badfd` is a simple eBPF tool designed to detect file descriptor leaks by tracing the openat syscall. 
-It monitors for ENOENT errors (file not found) and tracks operation latency, helping you identify inefficient file patterns, misconfigurations and potential leaks in real-time.
+`badfd` is a simple eBPF tool designed to detect file descriptors leaks by tracing the openat syscall. 
+Allowing you to observe ENOENT errors (file not found) , EACCES (permission denied) and IO latency. 
+### You can use it to: 
+* Hunt misconfigurations.
+* Debug Runtime and IO problems.
+* Discover potential leaks in real-time.
 
 
-## Requirements
+### Requirements
 * Linux Kernel 5.8+ (BTF support enabled)
 * Root privileges 
 * Go 1.20+ 
 
-## Installation
+### Installation
 ```bash
 # Clone the repo
 git clone https://github.com/scale03/badfd
