@@ -3,7 +3,7 @@
 `badfd` is a simple eBPF tool designed to detect file descriptors leaks by tracing the openat syscall. 
 Allowing you to observe ENOENT errors (file not found) , EACCES (permission denied) and IO latency. 
 ### You can use it to: 
-* Hunt misconfigurations.
+* Hunt race conditions.
 * Debug Runtime and IO problems.
 * Discover potential leaks in real-time.
 
